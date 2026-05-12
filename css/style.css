@@ -1,0 +1,180 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav {
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+nav2 {
+
+    padding: 0.5rem;
+}
+
+nav2 a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+    align-items: center;
+    display: inline-flex
+}
+
+
+/* style pour la présentation du site */
+
+.presentation {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex !important;
+    align-items: center;
+}
+
+.presentation-content {
+    padding: 2rem;
+}
+
+.presentation-content h2 {
+    margin-bottom: 1rem;
+}
+
+.presentation-content p {
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+.presentation-content a.btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.presentation-content a.btn:hover {
+    background-color: #555;
+}
+
+.presentation-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+
+}
+
+/* style pour la partie description des tâches */
+
+.description-taches {
+    background-color: #e0e0e0;
+    padding: 2rem;
+    margin: 0rem 0;
+    display: flex;
+    gap: 2rem;
+
+}
+
+.description-taches-content {
+
+}
+
+.description-taches-content img {
+    float: left;
+    margin-right: 1rem;
+    width: 100px;
+    height: 100px;
+}
+
+/* style pour la partie tarifs */
+
+.forfaits {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.forfait {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+}
+
+.forfait h3 {
+    margin-bottom: 1rem;
+}
+
+.forfait p {
+    margin-bottom: 1rem;
+}
+
+.forfait a.btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.forfait a.btn:hover {
+    background-color: #555;
+}
+
+.forfait-gratuit {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+}
+
+.forfait-pro {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+}
+
+.forfait-premium {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+}
