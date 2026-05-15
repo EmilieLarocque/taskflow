@@ -1,130 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabarit de site web</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <header>
-      <h1>Taskflow</h1>
+  <title>Gabarit de site web</title>
 
-      <h3>
-          <nav>
-        <ul>
-          <li><a href="#">Fonctionnalités</a></li>
-          <li><a href="#">Tarifs</a></li>
-          <li><a href="#">Ressources</a></li>
-        </ul>
-      </nav>
-      </h3>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+</head>
 
 
-      <nav2>
-        <ul>
-          <li><a href="#">S'identifier</a></li>
-          <li><a href="#">S'inscrire</a></li>
-        </ul>
-      </nav2>
-    </header>
+<body>
+
+  <header>
+    <h2>Taskflow</h2>
+
+    <nav>
+      <ul>
+        <li><a href="#">Fonctionnalités</a></li>
+        <li><a href="#">Tarifs</a></li>
+        <li><a href="#">Ressources</a></li>
+      </ul>
+    </nav>
 
 
 
+    <nav2>
+      <ul>
+        <li><a class="btn" href="#">S'identifier</a></li>
+        <li><a class="btn purple" href="#">S'inscrire</a></li>
+      </ul>
+    </nav2>
+  </header>
 
-    <main>
-<section class="presentation">
-    <div class="presentation-content">
-        <h2>Bienvenue sur notre site web</h2>
-        <p>Découvrez nos services et notre expertise.</p>
-        <a href="#" class="btn">commencer gratuitement</a>
+
+  <main>
+    <section class="presentation">
+      <div class="presentation-content">
+        <h4>Plateforme de gestion de tâches et de projets</h4>
+        <h2>Gérez vos projets en toute simplicité. Collaborez
+          <span class="text-accent">sans limite.</span>
+        </h2>
+        <p>Taskflow est votre solution de gestion de tâches et de projets, conçue pour vous aider à rester productif et
+          organisé.</p>
+        <a href="#" class="btn purple">commencer gratuitement</a>
         <a href="#" class="btn">voir la démonstration</a>
 
-        <h2>Utilisateurs satisfaits</h2>
         <div class="icon-client">
-            <img src="images/client1.png" alt="Client 1" />
-            <img src="images/client2.png" alt="Client 2" />
-            <img src="images/client3.png" alt="Client 3" />
-            <img src="images/client4.png" alt="Client 4" />
-        </div>
+          <img src="images/client1.jpg" alt="Client 1" />
+          <img src="images/client2.jpg" alt="Client 2" />
+          <img src="images/client3.jpg" alt="Client 3" />
+          <img src="images/client4.jpg" alt="Client 4" />
 
-        <div class="etoiles-satisfaction">
-            <div class="etoile"></div>
-            <div class="etoile"></div>
-            <div class="etoile"></div>
-            <div class="etoile"></div>
-            <div class="etoile"></div>
+
+          <div class="etoiles-satisfaction">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
             +5k avis positifs
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="presentation-image">
-        <img src="images/hero-image.jpg" alt="Image de présentation" />
-    </div>
-</section>
+      <div class="presentation-image">
+        <img src="images/presentation.png" alt="Image de présentation" />
+      </div>
+    </section>
 
-<!-- description des taches possibles -->
+    <!-- description des taches possibles -->
 
-<section class="description-taches">
+    <section class="description-taches">
 
-  <div class="description-taches-content">
-    <img src="images/task-icon.png" alt="Icône de tâche" />
-    <h2>Gérez vos tâches </h2>
-    <p>Notre plateforme vous permet de créer, organiser et suivre vos tâches en toute simplicité. Que ce soit pour des projets personnels ou professionnels, notre outil est conçu pour vous aider à rester productif et organisé.</p>
-  </div>
+      <div class="description-taches-content">
+        <i class="fa-solid fa-list-check"></i>
+        <h3>Gestion de tâches</h3>
+        <p>Notre plateforme vous permet de créer, organiser et suivre vos tâches en toute simplicité. Que ce soit pour
+          des projets personnels ou professionnels, notre outil est conçu pour vous aider à rester productif et
+          organisé.</p>
+      </div>
 
-  <div class="description-taches-content">
-    <img src="images/task-icon.png" alt="Icône de tâche" />
-    <h2>Gérez vos tâches </h2>
-    <p>Notre plateforme vous permet de créer, organiser et suivre vos tâches en toute simplicité. Que ce soit pour des projets personnels ou professionnels, notre outil est conçu pour vous aider à rester productif et organisé.</p>
-  </div>
+      <div class="description-taches-content">
+        <i class="fa-solid fa-users"></i>
+        <h3>Collaboration</h3>
+        <p>Notre plateforme vous permet de collaborer efficacement avec votre équipe. Partagez les tâches, communiquez
+          en temps réel et suivez l'avancement des projets.</p>
+      </div>
 
-  <div class="description-taches-content">
-    <img src="images/task-icon.png" alt="Icône de tâche" />
-    <h2>Gérez vos tâches </h2>
-    <p>Notre plateforme vous permet de créer, organiser et suivre vos tâches en toute simplicité. Que ce soit pour des projets personnels ou professionnels, notre outil est conçu pour vous aider à rester productif et organisé.</p>
-  </div>
+      <div class="description-taches-content">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Suivi du temps</h3>
+        <p>Notre plateforme vous permet de suivre le temps passé sur chaque tâche, ce qui vous aide à mieux gérer votre
+          productivité.</p>
+      </div>
 
-  <div class="description-taches-content">
-    <img src="images/task-icon.png" alt="Icône de tâche" />
-    <h2>Gérez vos tâches </h2>
-    <p>Notre plateforme vous permet de créer, organiser et suivre vos tâches en toute simplicité. Que ce soit pour des projets personnels ou professionnels, notre outil est conçu pour vous aider à rester productif et organisé.</p>
-  </div>
+      <div class="description-taches-content">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Analyse des performances</h3>
+        <p>Notre plateforme vous permet d'analyser les performances de votre équipe et de vos projets, afin d'identifier
+          les domaines d'amélioration.</p>
+      </div>
 
-  </section>
+    </section>
 
-      <section class="forfaits">
-
-
-        <div class="forfait-gratuit">
-          <h3>Service 1</h3>
-          <p>Description du service 1.</p>
-        </div>
-        <div class="forfait-pro">
-          <h3>Service 2</h3>
-          <p>Description du service 2.</p>
-        </div>
-        <div class="forfait-premium">
-          <h3>Service 3</h3>
-          <p>Description du service 3.</p>
-        </div>
-
-        <div class="forfaits-content">
-          <h2>Nos forfaits</h2>
-          <p>Choisissez le forfait qui correspond le mieux à vos besoins.</p>
-        </div>
-
-      </section>
-
-    </main>
-
-    <footer>
-      &copy; 2024 Gabarit de site web. Tous droits réservés.
-    </footer>
+    <section class="forfaits">
 
 
-  </body>
+      <div class="forfait">
+        <h3>Service 1</h3>
+        <p>Description du service 1.</p>
+      </div>
+      <div class="forfait">
+        <h3>Service 2</h3>
+        <p>Description du service 2.</p>
+      </div>
+      <div class="forfait">
+        <h3>Service 3</h3>
+        <p>Description du service 3.</p>
+      </div>
+
+      <div class="forfaits-content">
+        <h2>Nos forfaits</h2>
+        <p>Choisissez le forfait qui correspond le mieux à vos besoins.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2024 Gabarit de site web. Tous droits réservés.
+  </footer>
+
+
+</body>
+
 </html>
