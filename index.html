@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Gabarit de site web</title>
+  <title>Taskflow</title>
+  <meta name="description" content="Taskflow est une plateforme de gestion de tâches et de projets, conçue pour vous aider à rester productif et organisé." />
 
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -25,7 +26,7 @@
 <body>
 
   <header>
-    <h2>Taskflow</h2>
+    <h2><a class="logo" href="/index.html"><i class="fa-solid fa-bolt"></i> Taskflow</a></h2>
 
     <nav>
       <ul>
@@ -39,8 +40,8 @@
 
     <nav2>
       <ul>
-        <li><a class="btn" href="#">S'identifier</a></li>
-        <li><a class="btn purple" href="#">S'inscrire</a></li>
+        <li><a class="btn" href="/connexion.html">Connexion</a></li>
+        <li><a class="btn purple" href="/inscription.html">S'inscrire</a></li>
       </ul>
     </nav2>
   </header>
@@ -116,34 +117,72 @@
 
     </section>
 
-    <section class="forfaits">
+<section class="forfaits">
+  <h3>Nos forfaits</h3>
+  <p>Choisissez le forfait qui correspond le mieux à vos besoins.</p>
 
+  <div class="forfaits-flex">
+    
+    <div class="forfait">
+      <h4>Solo</h4>
+      <div class="prix">Gratuit</div>
+      <ul class="features">
+        <li>1 utilisateur</li>
+        <li>5 projets actifs</li>
+        <li>10 GB stockage</li>
+        <li>Support par email</li>
+      </ul>
+      <a href="#" class="btn">Commencer</a>
+    </div>
 
-      <div class="forfait">
-        <h3>Service 1</h3>
-        <p>Description du service 1.</p>
-      </div>
-      <div class="forfait">
-        <h3>Service 2</h3>
-        <p>Description du service 2.</p>
-      </div>
-      <div class="forfait">
-        <h3>Service 3</h3>
-        <p>Description du service 3.</p>
-      </div>
+    <div class="forfait forfait-populaire">
+      <span class="badge">Populaire</span>
+      <h4>Équipe</h4>
+      <div class="prix">19,99 $ <span>/mois</span></div>
+      <ul class="features">
+        <li>Jusqu'à 10 utilisateurs</li>
+        <li>Projets illimités</li>
+        <li>100 GB stockage</li>
+        <li>Support prioritaire</li>
+      </ul>
+      <a href="#" class="btn">Essayer gratuitement</a>
+    </div>
 
-      <div class="forfaits-content">
-        <h2>Nos forfaits</h2>
-        <p>Choisissez le forfait qui correspond le mieux à vos besoins.</p>
-      </div>
+    <div class="forfait">
+      <h4>Entreprise</h4>
+      <div class="prix">Sur mesure</div>
+      <ul class="features">
+        <li>Utilisateurs illimités</li>
+        <li>Projets illimités</li>
+        <li>1 TB stockage</li>
+        <li>Support dédié 24/7</li>
+      </ul>
+      <a href="#" class="btn">Nous contacter</a>
+    </div>
 
-    </section>
+  </div>
+</section>
 
   </main>
 
-  <footer>
-    &copy; 2024 Gabarit de site web. Tous droits réservés.
-  </footer>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Liens rapides</h4>
+      <a href="#">Fonctionnalités</a>
+      <a href="#">Tarifs</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-section">
+      <h4>Légal</h4>
+      <a href="#">Confidentialité</a>
+      <a href="#">Conditions</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Taskflow. Tous droits réservés.
+  </div>
+</footer>
 
 
 </body>
