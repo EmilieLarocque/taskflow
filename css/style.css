@@ -36,8 +36,6 @@
             #2a2340 50%,
             #1e202c 60%,
             #1e202c 5%);
-   
-    
 
     /* ========= TYPO ========= */
 
@@ -50,7 +48,6 @@
     --text-xl: 1.2rem;
     --text-2xl: 2.5rem;
     --text-3xl: 4rem;
-
 }
 
 body {
@@ -441,7 +438,7 @@ footer {
 
 /* page connexion */
 
-.logoConnexion {
+.logoConnexion, .logoInscription {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -456,7 +453,7 @@ footer {
     font-size: var(--text-2xl);
 }
 
-section.pageConnexion {
+section.pageConnexion, section.pageInscription {
     display: flex;
     gap: 64px;
     width: 100%;
@@ -464,7 +461,7 @@ section.pageConnexion {
     background: var(--bg-primary);
 }
 
-.text-connexion {
+.text-connexion, .text-Inscription {
     width: 50%;
     padding: 64px;
     display: flex;
@@ -484,13 +481,13 @@ section.pageConnexion {
     margin-bottom: 40px;
 }
 
-ul.listConnexion {
+ul.listConnexion, ul.listInscription {
     list-style-type: none;
     padding: 0;
     display: block;
 }
 
-li.listConnexion {
+li.listConnexion, li.listInscription {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -504,7 +501,7 @@ li.listConnexion {
     font-size: var(--text-lg);
 }
 
-.listConnexion {
+.listConnexion, .listInscription {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -567,7 +564,7 @@ li.listConnexion {
     font-style: normal;
 }
 
-.connexion {
+.connexion, .inscription {
     width: 50%;
     padding: 64px;
     text-align: center;
