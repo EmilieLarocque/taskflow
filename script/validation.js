@@ -137,14 +137,14 @@ const validateForm = () => {
     setSuccess(site);
   }
 
-// Validation taille d'équipe
-const tailleChecked = document.querySelector('input[name="taille"]:checked');
-if (!tailleChecked) {
-    setErrorGroupe(tailleGroup.closest(".formInput"), "Veuillez sélectionner une taille d'équipe");
+  // Validation taille d'équipe
+  const tailleChecked = document.querySelector('input[name="taille"]:checked');
+  if (!tailleChecked) {
+    setErrorGroupe(tailleGroup.closest(".form__input"), "Veuillez sélectionner une taille d'équipe");
     noError = false;
-} else {
-    setSuccessGroupe(tailleGroup.closest(".formInput"));
-}
+  } else {
+    setSuccessGroupe(tailleGroup.closest(".form__input"));
+  }
 
   // --------------------------------------------
   // SECTION 3 — PARAMÈTRES DU COMPTE
@@ -162,14 +162,14 @@ if (!tailleChecked) {
     setSuccess(pseudo);
   }
 
-// Validation plan choisi
-const planChecked = document.querySelector('input[name="plan"]:checked');
-if (!planChecked) {
-    setErrorGroupe(planGroup.closest(".formInput"), "Veuillez choisir un plan");
+  // Validation plan choisi
+  const planChecked = document.querySelector('input[name="plan"]:checked');
+  if (!planChecked) {
+    setErrorGroupe(planGroup.closest(".form__input"), "Veuillez choisir un plan");
     noError = false;
-} else {
-    setSuccessGroupe(planGroup.closest(".formInput"));
-}
+  } else {
+    setSuccessGroupe(planGroup.closest(".form__input"));
+  }
 
   // Validation mot de passe
   const passwordValue = password.value.trim();
@@ -189,10 +189,7 @@ if (!planChecked) {
     setError(password, "Doit contenir au moins un chiffre");
     noError = false;
   } else if (!/[!@#$%^&*]/.test(passwordValue)) {
-    setError(
-      password,
-      "Doit contenir au moins un caractère spécial (!@#$%^&*)",
-    );
+    setError(password, "Doit contenir au moins un caractère spécial (!@#$%^&*)");
     noError = false;
   } else {
     setSuccess(password);
@@ -213,12 +210,12 @@ if (!planChecked) {
   // Validation conditions d'utilisation
   if (!cgu.checked) {
     setErrorGroupe(
-      cgu.closest(".formOptions--colonne"),
+      cgu.closest(".form__options--colonne"),
       "Vous devez accepter les conditions d'utilisation",
     );
     noError = false;
   } else {
-    setSuccessGroupe(cgu.closest(".formOptions--colonne"));
+    setSuccessGroupe(cgu.closest(".form__options--colonne"));
   }
 
   return noError;
@@ -233,33 +230,31 @@ const isValidEmail = (email) => {
   return re.test(email);
 };
 
-// Champs input classiques — .closest() pour gérer le passwordWrap
 const setError = (element, message) => {
-  const formInput = element.closest(".formInput");
-  const errorDisplay = formInput.querySelector(".erreurMessage");
+  const formInput = element.closest(".form__input");
+  const errorDisplay = formInput.querySelector(".form__error");
   errorDisplay.innerText = message;
   formInput.classList.add("erreur");
   formInput.classList.remove("succes");
 };
 
 const setSuccess = (element) => {
-  const formInput = element.closest(".formInput");
-  const errorDisplay = formInput.querySelector(".erreurMessage");
+  const formInput = element.closest(".form__input");
+  const errorDisplay = formInput.querySelector(".form__error");
   errorDisplay.innerText = "";
   formInput.classList.add("succes");
   formInput.classList.remove("erreur");
 };
 
-// Groupes (radio, checkbox) — pas de .formInput direct sur l'élément
 const setErrorGroupe = (container, message) => {
-  const errorDisplay = container.querySelector(".erreurMessage");
+  const errorDisplay = container.querySelector(".form__error");
   if (errorDisplay) errorDisplay.innerText = message;
   container.classList.add("erreur");
   container.classList.remove("succes");
 };
 
 const setSuccessGroupe = (container) => {
-  const errorDisplay = container.querySelector(".erreurMessage");
+  const errorDisplay = container.querySelector(".form__error");
   if (errorDisplay) errorDisplay.innerText = "";
   container.classList.add("succes");
   container.classList.remove("erreur");
@@ -280,7 +275,7 @@ password.addEventListener("input", () => {
   if (/[!@#$%^&*]/.test(val)) force++;
 
   bars.forEach((bar, index) => {
-    bar.className = "forceBar";
+    bar.className = "form__force-bar";
     if (index < force) bar.classList.add("s" + force);
   });
 });
