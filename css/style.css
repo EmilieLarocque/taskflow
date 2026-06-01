@@ -1,22 +1,22 @@
 :root {
     /* ========= COULEURS ========= */
 
+    /* Fonds */
     --bg-primary: #1e202c;
     --bg-secondary: #252736;
     --bg-tertiary: #31323e;
 
-    --surface-card: #31323e;
-    --surface-hover: #3a3c4c;
-    --surface-glass: rgba(255, 255, 255, 0.04);
-
+    /* Accent / couleur principale */
     --accent-primary: #60519b;
     --accent-hover: #7564ba;
     --accent-soft: rgba(96, 81, 155, 0.15);
 
+    /* Texte */
     --text-primary: #ffffff;
     --text-secondary: #bfc0d1;
     --text-muted: #8d90a5;
 
+    /* Bordures */
     --border-primary: rgba(255, 255, 255, 0.06);
     --border-secondary: rgba(255, 255, 255, 0.12);
 
@@ -27,20 +27,18 @@
 
     /* ========= DÉGRADÉS ========= */
 
+    /* Fond colonne gauche (pages inscription) */
     --gradient-primary: linear-gradient(135deg,
             #1e202c 20%,
             #2a2340 40%,
             #60519b 100%);
 
-    --gradient-card: linear-gradient(150deg,
-            #2a2340 50%,
-            #1e202c 60%,
-            #1e202c 5%);
-
     /* ========= TYPO ========= */
 
+    /* Police principale */
     --font-primary: 'Inter', sans-serif;
 
+    /* Tailles de texte */
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;
@@ -50,6 +48,10 @@
     --text-3xl: 4rem;
 }
 
+/* ================================================
+   BASE
+   ================================================ */
+
 body {
     font-family: var(--font-primary);
     margin: 0;
@@ -57,71 +59,11 @@ body {
     background: var(--bg-primary);
 }
 
-header {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    padding: 5px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-}
-
-nav {
-    padding: 0.5rem;
-}
-
-nav a {
-    color: var(--text-primary);
-    margin: 0 0.5rem;
-    text-decoration: none;
-}
-
-nav2 {
-    padding: 0.5rem;
-}
-
-nav2 a {
-    color: var(--text-primary);
-    margin: 0 0.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-main {
-    width: 100%;
-    margin: 0 auto;
-}
-
-footer {
-    background: var(--bg-secondary);
-    color: var(--text-primary);
-    padding: 1rem;
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.5rem 0;
-    align-items: center;
-    display: inline-flex
-}
-
-.purple {
-    background: var(--accent-primary);
-    color: var(--text-primary);
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-h1, h2, h3, h4 {
+/* Titres */
+h1,
+h2,
+h3,
+h4 {
     color: var(--text-primary);
     margin: 0.5rem 0;
 }
@@ -150,6 +92,8 @@ h4 {
     font-weight: 500;
 }
 
+/* Paragraphes */
+
 p {
     color: var(--text-secondary);
     font-size: var(--text-xs);
@@ -158,287 +102,46 @@ p {
     padding: 0.5rem 0;
 }
 
-/* style pour la présentation du site */
+/* ================================================
+   PAGE INSCRIPTION - MISE EN PAGE
+   ================================================ */
 
-.presentation {
-    background: var(--gradient-card);
-    padding: 2rem;
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-    margin-top: 0px;
-}
-
-.presentation-content {
-    padding: 2rem;
-    width: 50%;
-    margin: auto;
-}
-
-.presentation-content h2 {
-    margin-bottom: 1rem;
-}
-
-.presentation-content h4 {
-    margin-bottom: 1rem;
-}
-
-.presentation-content p {
-    margin-bottom: 1rem;
-    max-width: 600px;
-}
-
-.presentation-content a.btn {
-    padding: 0.5rem 1rem;
-    background: var(--bg-secondary);
-    border: none;
-    cursor: pointer;
-}
-
-.presentation-content a.btn {
-    padding: 0.5rem 1rem;
-    background: var(--bg-secondary);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 2px solid var(--border-secondary);
-}
-
-a.btn.purple {
-    background: var(--accent-primary);
-    color: var(--text-primary);
-    border-radius: 5px;
-}
-
-.presentation-content a.btn:hover {
-    background: var(--bg-tertiary);
-}
-
-.icon-client {
-    display: flex;
-    margin-top: 3rem;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-left: 2rem;
-}
-
-.icon-client img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: -1.0rem;
-}
-
-.etoiles-satisfaction {
-    display: flex;
-    align-items: center;
-    margin-top: 0.7rem;
-    margin-left: 1rem;
-    color: var(--text-muted);
-}
-
-i.fa-solid.fa-star {
-    padding-left: 0.2rem;
-}
-
-.presentation-image img {
-    max-width: 600px;
-    margin-top: 1rem;
-}
-
-/* style pour la partie description des tâches */
-
-.description-taches {
-    background: var(--bg-primary);
-    padding: 0;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 75%;
-}
-
-.description-taches-content {
-    padding: 2rem;
-    font-size: 0.8rem;
-    line-height: 1.2;
-}
-
-.description-taches-content i {
-    font-size: 32px;
-    color: var(--accent-primary);
-    margin-bottom: 15px;
-    float: left;
-    padding: 20px 20px 0 0;
-}
-
-/* style pour la partie tarifs */
-
-.forfaits {
-    background: var(--bg-secondary);
-    padding: 64px 24px;
-    text-align: center;
-}
-
-.forfaits h3 {
-    font-size: var(--text-2xl);
-    color: var(--text-primary);
-    margin-bottom: 8px;
-}
-
-.forfaits>p {
-    color: var(--text-secondary);
-    margin-bottom: 40px;
-}
-
-.forfaits-flex {
-    display: flex;
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.forfait {
-    background: var(--surface-card);
-    padding: 40px;
-    border: 1px solid var(--border-primary);
-    border-radius: 14px;
-    flex: 1;
-    position: relative;
-}
-
-.forfait:hover {
-    border-color: var(--border-secondary);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.forfait h4 {
-    font-size: var(--text-xl);
-    color: var(--text-primary);
-    margin-bottom: 16px;
-}
-
-.prix {
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    color: var(--accent-primary);
-    margin-bottom: 24px;
-}
-
-.prix span {
-    font-size: var(--text-base);
-    font-weight: 400;
-    color: var(--text-muted);
-}
-
-.features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px 0;
-}
-
-.features li {
-    color: var(--text-secondary);
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border-primary);
-}
-
-.features li:last-child {
-    border-bottom: none;
-}
-
-.forfait a.btn {
-    display: inline-block;
-    width: 90%;
-    padding: 16px;
-    background: var(--accent-primary);
-    color: var(--text-primary);
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.forfait a.btn:hover {
-    background: var(--accent-hover);
-}
-
-/* Forfait populaire */
-.forfait-populaire {
-    border-color: var(--accent-primary);
-    transform: scale(1.05);
-}
-
-.badge {
-    position: absolute;
-    top: -12px;
-    right: 24px;
-    background: var(--accent-primary);
-    color: var(--text-primary);
-    padding: 4px 16px;
-    border-radius: 5px;
-    font-size: var(--text-sm);
-    font-weight: 600;
-}
-
-/* footer */
-
-footer {
-    background: var(--bg-primary);
-    border-top: 1px solid var(--border-primary);
-    color: var(--text-muted);
-    padding: 64px 24px 24px;
-}
-
-.footer-content {
+section.pageInscription {
     display: flex;
     gap: 64px;
-    max-width: 1200px;
-    margin: 0 auto 40px;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-primary);
 }
 
-.footer-section {
-    flex: 1;
+/* Colonne gauche - bienvenue */
+.text-Inscription {
+    position: sticky;
+    top: 0;
+    height: 86vh;
+    width: 50%;
+    padding: 64px;
+    overflow-y: auto;
+    background: var(--gradient-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
 }
 
-.footer-section h4 {
-    color: var(--text-primary);
-    margin-bottom: 16px;
+/* Colonne droite - formulaire */
+.inscription {
+    width: 50%;
+    padding: 64px;
 }
 
-.footer-section p {
-    color: var(--text-secondary);
-    line-height: 1.5;
-}
+/* ================================================
+   COLONNE GAUCHE — CONTENU
+   ================================================ */
 
-.footer-section a {
-    display: block;
-    color: var(--text-secondary);
-    text-decoration: none;
-    padding: 4px 0;
-}
+/* Logo */
 
-.footer-section a:hover {
-    color: var(--accent-primary);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid var(--border-primary);
-    color: var(--text-muted);
-    font-size: var(--text-sm);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 24px;
-    }
-}
-
-/* page connexion */
-
-.logoConnexion, .logoInscription {
+.logoInscription {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -448,46 +151,47 @@ footer {
     margin-bottom: 64px;
 }
 
-.logoConnexion i {
-    color: var(--accent-primary);
-    font-size: var(--text-2xl);
+.logoInscription a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.3px;
 }
 
-section.pageConnexion, section.pageInscription {
-    display: flex;
-    gap: 64px;
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg-primary);
+.logoInscription i {
+    color: var(--accent-hover);
 }
 
-.text-connexion, .text-Inscription {
-    width: 50%;
-    padding: 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.text-connexion h2 {
+/* Titres et texte */
+.text-Inscription h2 {
     font-size: var(--text-2xl);
     color: var(--text-primary);
-    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin: 0;
 }
 
-.text-connexion>p {
+.text-Inscription>p {
     color: var(--text-secondary);
-    line-height: 1.5;
-    margin-bottom: 40px;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    margin: 0;
 }
 
-ul.listConnexion, ul.listInscription {
+/* Liste des avantages */
+
+ul.listInscription {
     list-style-type: none;
     padding: 0;
     display: block;
 }
 
-li.listConnexion, li.listInscription {
+li.listInscription {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -496,18 +200,13 @@ li.listConnexion, li.listInscription {
     font-size: var(--text-base);
 }
 
-.listConnexion i {
-    color: var(--accent-primary);
-    font-size: var(--text-lg);
-}
-
-.listConnexion, .listInscription {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.listInscription {
     color: var(--text-secondary);
     margin-bottom: 16px;
+    margin-left: 20px;
 }
+
+/* Témoignage */
 
 .temoignage {
     background: var(--accent-soft);
@@ -564,35 +263,11 @@ li.listConnexion, li.listInscription {
     font-style: normal;
 }
 
-.connexion, .inscription {
-    width: 50%;
-    padding: 64px;
-    text-align: center;
-    background: var(--bg-secondary);
-}
+/* ================================================
+   FORMULAIRE — STRUCTURE
+   ================================================ */
 
-.connexion h2 {
-    font-size: var(--text-2xl);
-    color: var(--text-primary);
-    margin-bottom: 8px;
-}
-
-.connexion h3 {
-    font-size: var(--text-base);
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-bottom: 40px;
-}
-
-.connexion h3 a {
-    color: var(--accent-primary);
-    text-decoration: none;
-}
-
-.connexion h3 a:hover {
-    color: var(--accent-hover);
-}
-
+/* Champ individuel */
 .formInput {
     margin-bottom: 24px;
 }
@@ -605,8 +280,9 @@ li.listConnexion, li.listInscription {
     text-align: left;
 }
 
+/* Inputs texte */
 .formInput input {
-    width: 100%;
+    width: 92%;
     padding: 16px;
     background: var(--bg-primary);
     border: 1px solid var(--border-primary);
@@ -624,26 +300,257 @@ li.listConnexion, li.listInscription {
     color: var(--text-muted);
 }
 
-.formOptions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+/* États de validation */
+.formInput.sucess input {
+    border-color: #4ade80;
 }
 
+.formInput.erreur input {
+    border-color: #ef4444;
+}
+
+/* Message d'erreur */
+.formInput .erreurMessage {
+    color: #ef4444;
+    font-size: 9px;
+    height: 13px;
+}
+
+/* Grid deux colonnes (ex: nom + prénom) */
+
+.champsForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+    padding: 0px 26px 0;
+}
+
+/* Mentions obligatoire / facultatif */
+
+.obligatoire {
+    color: var(--accent-hover);
+    margin-left: 2px;
+}
+
+.opt {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ================================================
+   FORMULAIRE — FIELDSETS
+   ================================================ */
+
+fieldset .formInput {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+fieldset .champsForm .formInput {
+    padding: 0;
+}
+
+.formInput label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+
+fieldset {
+    border: 1px solid var(--border-secondary);
+    padding: 0;
+    margin-bottom: 24px;
+    background: var(--surface-glass);
+    overflow: hidden;
+}
+
+/* En-tête de section */
+
+legend {
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--accent-soft);
+    border-bottom: 1px solid var(--border-secondary);
+    margin-bottom: 25px;
+}
+
+.legend-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.legend-text {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.2px;
+}
+
+/* ================================================
+   FORMULAIRE — CHAMPS SPÉCIAUX
+   ================================================ */
+
+   /* Select */
+fieldset .formInput select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-family: var(--font-primary);
+    appearance: none;
+    padding-right: 36px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+fieldset .formInput select:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+fieldset .formInput select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Boutons radio */
+.radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+}
+
+.radioOption input[type="radio"] {
+    display: none;
+}
+
+.radioOption label {
+    padding: 8px 16px;
+    border: 1px solid var(--border-secondary);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 0;
+}
+
+.radioOption label:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.radioOption input[type="radio"]:checked+label {
+    border-color: var(--accent-primary);
+    background: var(--accent-soft);
+    color: var(--accent-hover);
+    font-weight: 500;
+}
+
+.radioGroup--colonne {
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Checkbox */
 .checkbox {
     display: flex;
     align-items: center;
+    gap: 10px;
     color: var(--text-secondary);
     font-size: var(--text-sm);
     cursor: pointer;
 }
 
-.checkbox input {
-    margin-right: 8px;
+.checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent-primary);
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-.link {
+.checkbox span {
+    line-height: 1.4;
+}
+
+/* Mot de passe — indicateur de force */
+.passwordForce {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.forceBar {
+    height: 3px;
+    flex: 1;
+    border-radius: 2px;
+    background: var(--border-secondary);
+    transition: background 0.3s;
+}
+
+.forceBar.s1 {
+    background: var(--error);
+}
+
+.forceBar.s2 {
+    background: var(--warning);
+}
+
+.forceBar.s3 {
+    background: var(--success);
+}
+
+.forceBar.s4 {
+    background: var(--success);
+}
+
+/* Options en colonne (CGU + newsletter) */
+.formOptions--colonne {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 20px 20px;
+    margin-bottom: 0;
+}
+
+/* ================================================
+   FORMULAIRE — LIENS ET BOUTONS
+   ================================================ */
+
+   /* Lien générique */
+   .link {
     color: var(--accent-primary);
     text-decoration: none;
     font-size: var(--text-sm);
@@ -653,6 +560,7 @@ li.listConnexion, li.listInscription {
     color: var(--accent-hover);
 }
 
+/* Bouton principal */
 .btn-submit {
     width: 100%;
     padding: 16px;
@@ -670,7 +578,7 @@ li.listConnexion, li.listInscription {
     background: var(--accent-hover);
 }
 
-/* Séparateur */
+/* Séparateur "ou" */
 
 .separator {
     display: flex;
@@ -691,6 +599,8 @@ li.listConnexion, li.listInscription {
     padding: 0 16px;
 }
 
+/* Bouton Google */
+
 .btn-google {
     width: 100%;
     padding: 16px;
@@ -700,12 +610,17 @@ li.listConnexion, li.listInscription {
     border-radius: 5px;
     font-size: var(--text-base);
     cursor: pointer;
+    margin-top: 25px;
 }
 
 .btn-google:hover {
     background: var(--surface-hover);
     border-color: var(--border-secondary);
 }
+
+/* ================================================
+   FORMULAIRE — PIED DE PAGE
+   ================================================ */
 
 .form-footer {
     margin: 24px 0;
@@ -717,10 +632,59 @@ li.listConnexion, li.listInscription {
     font-size: var(--text-sm);
 }
 
-.form-terms {
-    margin-top: 24px;
+
+/* ================================================
+   PAGE CONFIRMATION
+   ================================================ */
+
+.pageConfirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.confirmation-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 14px;
+    padding: 64px 40px;
+    max-width: 450px;
+    width: 100%;
     text-align: center;
-    color: var(--text-muted);
-    font-size: var(--text-xs);
-    line-height: 1.5;
+}
+
+.confirmation-container i {
+    font-size: 64px;
+    color: var(--accent-primary);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.confirmation-container h2 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.confirmation-container p {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.confirmation-container a.btn-submit {
+    display: inline-block;
+    width: 90%;
+    padding: 16px;
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+.confirmation-container a.btn-submit:hover {
+    background: var(--accent-hover);
 }
