@@ -670,7 +670,7 @@ fieldset .form__input select option {
 }
 
 @media (max-width: 500px) {
-    section.page-Inscription {
+    section.page-inscription {
         flex-direction: column;
     }
 
