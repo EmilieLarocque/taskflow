@@ -1,0 +1,483 @@
+Voilà ce qui sort du style.css pour aller dans une feuille séparée — appelons-la style-global.css :
+css/* ================================================
+   BASE
+   ================================================ */
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+}
+
+/* Titres */
+h1, h2, h3, h4 {
+    color: var(--text-primary);
+    margin: 0.5rem 0;
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+
+h2 span.text-accent { color: var(--accent-primary); }
+
+h3 {
+    font-size: var(--text-xl);
+    font-weight: 500;
+}
+
+h4 {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    font-weight: 500;
+}
+
+/* Paragraphes */
+p {
+    color: var(--text-secondary);
+    font-size: var(--text-xs);
+    line-height: 1.5;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+}
+
+/* Listes */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+    align-items: center;
+    display: inline-flex;
+}
+
+/* Bouton violet générique */
+.purple {
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* ================================================
+   HEADER / NAV
+   ================================================ */
+
+header {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav {
+    padding: 0.5rem;
+}
+
+nav a {
+    color: var(--text-primary);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+nav2 {
+    padding: 0.5rem;
+}
+
+nav2 a {
+    color: var(--text-primary);
+    margin: 0 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* ================================================
+   PAGE D'ACCUEIL — PRÉSENTATION
+   ================================================ */
+
+.presentation {
+    background: var(--gradient-card);
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.presentation-content {
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
+}
+
+.presentation-content h2 { margin-bottom: 1rem; }
+.presentation-content h4 { margin-bottom: 1rem; }
+
+.presentation-content p {
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+
+.presentation-content a.btn {
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--border-secondary);
+}
+
+a.btn.purple {
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    border-radius: 5px;
+}
+
+.presentation-content a.btn:hover {
+    background: var(--bg-tertiary);
+}
+
+/* Avatars clients */
+.icon-client {
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 2rem;
+}
+
+.icon-client img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: -1rem;
+}
+
+/* Étoiles */
+.etoiles-satisfaction {
+    display: flex;
+    align-items: center;
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+    color: var(--text-muted);
+}
+
+i.fa-solid.fa-star {
+    padding-left: 0.2rem;
+}
+
+.presentation-image img {
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+
+/* ================================================
+   PAGE D'ACCUEIL — DESCRIPTION DES TÂCHES
+   ================================================ */
+
+.description-taches {
+    background: var(--bg-primary);
+    padding: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 75%;
+}
+
+.description-taches-content {
+    padding: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.description-taches-content i {
+    font-size: 32px;
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+    float: left;
+    padding: 20px 20px 0 0;
+}
+
+
+/* ================================================
+   PAGE D'ACCUEIL — FORFAITS
+   ================================================ */
+
+.forfaits {
+    background: var(--bg-secondary);
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.forfaits h3 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.forfaits > p {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.forfaits-flex {
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.forfait {
+    background: var(--surface-card);
+    padding: 40px;
+    border: 1px solid var(--border-primary);
+    border-radius: 14px;
+    flex: 1;
+    position: relative;
+}
+
+.forfait:hover {
+    border-color: var(--border-secondary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.forfait h4 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.prix {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 24px;
+}
+
+.prix span {
+    font-size: var(--text-base);
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.features li {
+    color: var(--text-secondary);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+.forfait a.btn {
+    display: inline-block;
+    width: 90%;
+    padding: 16px;
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forfait a.btn:hover {
+    background: var(--accent-hover);
+}
+
+/* Forfait populaire */
+.forfait-populaire {
+    border-color: var(--accent-primary);
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    padding: 4px 16px;
+    border-radius: 5px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+
+/* ================================================
+   PAGE CONNEXION
+   ================================================ */
+
+section.pageConnexion {
+    display: flex;
+    gap: 64px;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+/* Logo */
+.logoConnexion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 64px;
+}
+
+.logoConnexion i {
+    color: var(--accent-primary);
+    font-size: var(--text-2xl);
+}
+
+/* Colonne gauche */
+.text-connexion {
+    width: 50%;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-connexion h2 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.text-connexion > p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Liste avantages */
+ul.listConnexion {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}
+
+li.listConnexion {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: var(--text-base);
+}
+
+.listConnexion i {
+    color: var(--accent-primary);
+    font-size: var(--text-lg);
+}
+
+.listConnexion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* Colonne droite */
+.connexion {
+    width: 50%;
+    padding: 64px;
+    text-align: center;
+    background: var(--bg-secondary);
+}
+
+.connexion h2 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.connexion h3 {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.connexion h3 a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.connexion h3 a:hover {
+    color: var(--accent-hover);
+}
+
+
+/* ================================================
+   FOOTER
+   ================================================ */
+
+footer {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-primary);
+    color: var(--text-muted);
+    padding: 64px 24px 24px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.footer-section a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 4px 0;
+}
+
+.footer-section a:hover {
+    color: var(--accent-primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-primary);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
