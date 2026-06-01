@@ -2,268 +2,257 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Taskflow - S'inscrire</title>
-    <meta name="description" content="Créez votre compte Taskflow et commencez à gérer vos projets dès maintenant." />
+  <title>Taskflow - S'inscrire</title>
+  <meta name="description" content="Créez votre compte Taskflow et commencez à gérer vos projets dès maintenant." />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style-global.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-global.css" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-    <script src="./script/validation.js" defer></script>
+  <script src="./script/validation.js" defer></script>
 </head>
 
 <body>
 
-    <section class="pageInscription">
+  <section class="page-inscription">
 
-        <div class="text-Inscription">
+    <main>
+    <div class="page-inscription__sidebar">
 
-            <div class="logoInscription">
-                <a href="index.html"><i class="fa-solid fa-bolt"></i> taskflow</a>
+      <div class="page-inscription__logo">
+        <a href="index.html"><i class="fa-solid fa-bolt"></i> taskflow</a>
+      </div>
+
+      <h2>Bienvenue</h2>
+      <p>Créez votre compte et commencez à gérer vos projets en toute simplicité.</p>
+
+      <ul class="page-inscription__list">
+        <li><i class="fa-solid fa-list-check"></i> Accèdez à tous vos projets</li>
+        <li><i class="fa-solid fa-users"></i> Collaborez avec votre équipe</li>
+        <li><i class="fa-solid fa-chart-line"></i> Suivez l'avancement en temps réel</li>
+      </ul>
+
+      <div class="temoignage">
+        <p>"TaskFlow nous a permis de gagner en productivité et de livrer nos projets plus rapidement."</p>
+        <div class="temoignage__auteur">
+          <img src="avatar.jpg" alt="Photo de Sophie Martin, chef de projet chez Noveltech">
+          <div class="temoignage__info">
+            <h4>Sophie Martin</h4>
+            <p>Chef de projet chez Noveltech</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-inscription__content">
+
+      <h2>S'inscrire</h2>
+      <h3>Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></h3>
+
+      <form id="form" action="confirmation.html" method="get" novalidate>
+
+        <!-- Section 1 - Informations personnelles -->
+        <fieldset id="InfoPerso">
+          <legend>
+            <div class="form__legend-inner">
+              <div class="form__legend-num">1</div>
+              <div class="form__legend-text">Informations personnelles</div>
+            </div>
+          </legend>
+
+          <div class="champs__form">
+            <div class="form__input">
+              <label for="nom">Nom complet <span class="form__obligatoire">*</span></label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              <div class="form__error"></div>
             </div>
 
-            <h2>Bienvenue</h2>
-            <p>Créez votre compte et commencez à gérer vos projets en toute simplicité.</p>
+            <div class="form__input">
+              <label for="prenom">Prénom <span class="form__obligatoire">*</span></label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+              <div class="form__error"></div>
+            </div>
+          </div>
 
-            <ul class="listInscription">
-                <li><i class="fa-solid fa-list-check"></i> Accèdez à tous vos projets</li>
-                <li><i class="fa-solid fa-users"></i> Collaborez avec votre équipe</li>
-                <li><i class="fa-solid fa-chart-line"></i> Suivez l'avancement en temps réel</li>
-            </ul>
+          <div class="form__input">
+            <label for="dateNaissance">Date de naissance <span class="form__obligatoire">*</span></label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+            <div class="form__error"></div>
+          </div>
 
-            <div class="temoignage">
-                <p>"TaskFlow nous a permis de gagner en productivité et de livrer nos projets plus rapidement."</p>
-                <div class="temoignageAuteur">
-                    <img src="avatar.jpg" alt="Sophie Martin">
-                    <div class="temoignageInfo">
-                        <h4>Sophie Martin</h4>
-                        <p>Chef de projet chez Noveltech</p>
-                    </div>
+          <div class="form__input">
+            <label for="email">Adresse courriel <span class="form__obligatoire">*</span></label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            <div class="form__error"></div>
+          </div>
+
+          <div class="form__input">
+            <label for="tel">Numéro de téléphone <span class="form__opt">(facultatif)</span></label>
+            <input type="tel" id="tel" name="tel" placeholder="+1 (514) 555-0000">
+            <div class="form__error"></div>
+          </div>
+
+        </fieldset>
+
+        <!-- Section 2 - Informations de l'entreprise -->
+        <fieldset id="InfoEntreprise">
+          <legend>
+            <div class="form__legend-inner">
+              <div class="form__legend-num">2</div>
+              <div class="form__legend-text">Informations de l'entreprise</div>
+            </div>
+          </legend>
+
+          <div class="form__input">
+            <label for="entreprise">Nom de l'entreprise ou organisation <span class="form__obligatoire">*</span></label>
+            <input type="text" id="entreprise" name="entreprise" placeholder="Votre entreprise">
+            <div class="form__error"></div>
+          </div>
+
+          <div class="champs__form">
+            <div class="form__input">
+              <label for="secteur">Secteur d'activité <span class="form__obligatoire">*</span></label>
+              <select id="secteur" name="secteur">
+                <option value="" disabled selected>Choisir…</option>
+                <option value="tech">Technologie</option>
+                <option value="mktg">Marketing</option>
+                <option value="fin">Finance</option>
+                <option value="sante">Santé</option>
+                <option value="edu">Éducation</option>
+                <option value="autre">Autre</option>
+              </select>
+              <div class="form__error"></div>
+            </div>
+
+            <div class="form__input">
+              <label for="site">Site web <span class="form__opt">(facultatif)</span></label>
+              <input type="url" id="site" name="site" placeholder="https://monentreprise.com">
+              <div class="form__error"></div>
+            </div>
+          </div>
+
+          <div class="form__input">
+            <label>Taille de l'équipe <span class="form__obligatoire">*</span></label>
+            <div class="form__radio-group" id="taille-group">
+              <div class="form__radio-option">
+                <input type="radio" name="taille" id="t1" value="1">
+                <label for="t1">1 personne</label>
+              </div>
+              <div class="form__radio-option">
+                <input type="radio" name="taille" id="t2" value="2-10">
+                <label for="t2">2–10</label>
+              </div>
+              <div class="form__radio-option">
+                <input type="radio" name="taille" id="t3" value="11-50">
+                <label for="t3">11–50</label>
+              </div>
+              <div class="form__radio-option">
+                <input type="radio" name="taille" id="t4" value="51+">
+                <label for="t4">51 et plus</label>
+              </div>
+            </div>
+            <div class="form__error"></div>
+          </div>
+
+        </fieldset>
+
+        <!-- Section 3 - Paramètres du compte -->
+        <fieldset id="Compte">
+          <legend>
+            <div class="form__legend-inner">
+              <div class="form__legend-num">3</div>
+              <div class="form__legend-text">Paramètres du compte</div>
+            </div>
+          </legend>
+
+          <div class="champs__form">
+            <div class="form__input">
+              <label for="pseudo">Nom d'utilisateur <span class="form__obligatoire">*</span></label>
+              <input type="text" id="pseudo" name="pseudo" placeholder="marie_tremblay" required>
+              <div class="form__error"></div>
+            </div>
+
+            <div class="form__input">
+              <label>Plan choisi <span class="form__obligatoire">*</span></label>
+              <div class="form__radio-group form__radio-group--colonne" id="plan-group">
+                <div class="form__radio-option">
+                  <input type="radio" name="plan" id="p1" value="gratuit">
+                  <label for="p1">Gratuit</label>
                 </div>
+                <div class="form__radio-option">
+                  <input type="radio" name="plan" id="p2" value="pro">
+                  <label for="p2">Pro — 9,99 $/mois</label>
+                </div>
+                <div class="form__radio-option">
+                  <input type="radio" name="plan" id="p3" value="ent">
+                  <label for="p3">Entreprise — 29,99 $/mois</label>
+                </div>
+              </div>
+              <div class="form__error"></div>
             </div>
+          </div>
 
-        </div>
-
-        <div class="inscription">
-
-            <h2>S'inscrire</h2>
-            <h3>Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></h3>
-
-            <form id="form" action="confirmation.html" method="get" novalidate>
-
-                <!-- Section 1 - Informations personnelles -->
-                <fieldset id="InfoPerso">
-                    <legend>
-                        <div class="legend-inner">
-                            <div class="legend-num">1</div>
-                            <div class="legend-text">Informations personnelles</div>
-                        </div>
-                    </legend>
-
-                    <div class="champsForm">
-                        <div class="formInput">
-                            <label for="nom">Nom complet <span class="obligatoire">*</span></label>
-                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-                            <div class="erreurMessage"></div>
-                        </div>
-
-                        <div class="formInput">
-                            <label for="prenom">Prénom <span class="obligatoire">*</span></label>
-                            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
-                            <div class="erreurMessage"></div>
-                        </div>
-                    </div>
-
-                    <div class="formInput">
-                        <label for="dateNaissance">Date de naissance <span class="obligatoire">*</span></label>
-                        <input type="date" id="dateNaissance" name="dateNaissance" required>
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                    <div class="formInput">
-                        <label for="email">Adresse courriel <span class="obligatoire">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                    <div class="formInput">
-                        <label for="tel">Numéro de téléphone <span class="opt">(facultatif)</span></label>
-                        <input type="tel" id="tel" name="tel" placeholder="+1 (514) 555-0000">
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                </fieldset>
-
-                <!-- Section 2 - Informations de l'entreprise -->
-                <fieldset id="InfoEntreprise">
-                    <legend>
-                        <div class="legend-inner">
-                            <div class="legend-num">2</div>
-                            <div class="legend-text">Informations de l'entreprise</div>
-                        </div>
-                    </legend>
-
-                    <div class="formInput">
-                        <label for="entreprise">Nom de l'entreprise ou organisation <span
-                                class="obligatoire">*</span></label>
-                        <input type="text" id="entreprise" name="entreprise" placeholder="Votre entreprise">
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                    <div class="champsForm">
-                        <div class="formInput">
-                            <label for="secteur">Secteur d'activité <span class="obligatoire">*</span></label>
-                            <select id="secteur" name="secteur">
-                                <option value="" disabled selected>Choisir…</option>
-                                <option value="tech">Technologie</option>
-                                <option value="mktg">Marketing</option>
-                                <option value="fin">Finance</option>
-                                <option value="sante">Santé</option>
-                                <option value="edu">Éducation</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                            <div class="erreurMessage"></div>
-                        </div>
-
-                        <div class="formInput">
-                            <label for="site">Site web <span class="opt">(facultatif)</span></label>
-                            <input type="url" id="site" name="site" placeholder="https://monentreprise.com">
-                            <div class="erreurMessage"></div>
-                        </div>
-                    </div>
-
-                    <div class="formInput">
-                        <label>Taille de l'équipe <span class="obligatoire">*</span></label>
-                        <div class="radioGroup" id="taille-group">
-                            <div class="radioOption">
-                                <input type="radio" name="taille" id="t1" value="1">
-                                <label for="t1">1 personne</label>
-                            </div>
-                            <div class="radioOption">
-                                <input type="radio" name="taille" id="t2" value="2-10">
-                                <label for="t2">2–10</label>
-                            </div>
-                            <div class="radioOption">
-                                <input type="radio" name="taille" id="t3" value="11-50">
-                                <label for="t3">11–50</label>
-                            </div>
-                            <div class="radioOption">
-                                <input type="radio" name="taille" id="t4" value="51+">
-                                <label for="t4">51 et plus</label>
-                            </div>
-                        </div>
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                </fieldset>
-
-                <!-- Section 3 - Paramètres du compte -->
-                <fieldset id="Compte">
-                    <legend>
-                        <div class="legend-inner">
-                            <div class="legend-num">3</div>
-                            <div class="legend-text">Paramètres du compte</div>
-                        </div>
-                    </legend>
-
-                    <div class="champsForm">
-                        <div class="formInput">
-                            <label for="pseudo">Nom d'utilisateur <span class="obligatoire">*</span></label>
-                            <input type="text" id="pseudo" name="pseudo" placeholder="marie_tremblay" required>
-                            <div class="erreurMessage"></div>
-                        </div>
-
-                        <div class="formInput">
-                            <label>Plan choisi <span class="obligatoire">*</span></label>
-                            <div class="radioGroup radioGroup--colonne" id="plan-group">
-                                <div class="radioOption">
-                                    <input type="radio" name="plan" id="p1" value="gratuit">
-                                    <label for="p1">Gratuit</label>
-                                </div>
-                                <div class="radioOption">
-                                    <input type="radio" name="plan" id="p2" value="pro">
-                                    <label for="p2">Pro — 9,99 $/mois</label>
-                                </div>
-                                <div class="radioOption">
-                                    <input type="radio" name="plan" id="p3" value="ent">
-                                    <label for="p3">Entreprise — 29,99 $/mois</label>
-                                </div>
-                            </div>
-                            <div class="erreurMessage"></div>
-                        </div>
-                    </div>
-
-                    <div class="formInput">
-                        <label for="password">Mot de passe <span class="obligatoire">*</span></label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
-                        <div class="passwordForce">
-                            <div class="forceBar" id="bar1"></div>
-                            <div class="forceBar" id="bar2"></div>
-                            <div class="forceBar" id="bar3"></div>
-                            <div class="forceBar" id="bar4"></div>
-                        </div>
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                    <div class="formInput">
-                        <label for="confirmPassword">Confirmer le mot de passe <span
-                                class="obligatoire">*</span></label>
-
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••"
-                            required>
-                        <div class="erreurMessage"></div>
-                    </div>
-
-                    <div class="formOptions formOptions--colonne">
-                        <label class="checkbox">
-                            <input type="checkbox" id="cgu" name="cgu" required>
-                            <span>J'accepte les <a href="https://taskflow.app/conditions" target="_blank"
-                                    class="link">conditions d'utilisation</a>
-                                et la politique de confidentialité. <span class="obligatoire">*</span></span>
-                        </label>
-                        <div class="erreurMessage"></div>
-
-                        <label class="checkbox">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <span>Je souhaite recevoir les nouveautés et offres par courriel.
-                                <span class="opt">(facultatif)</span></span>
-                        </label>
-                    </div>
-
-                </fieldset>
-
-                <button type="submit" class="btn-submit">Créer un compte</button>
-
-            </form>
-
-            <div class="separator">
-                <span>ou</span>
+          <div class="form__input">
+            <label for="password">Mot de passe <span class="form__obligatoire">*</span></label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required>
+            <div class="form__password--Force">
+              <div class="form__force-bar" id="bar1"></div>
+              <div class="form__force-bar" id="bar2"></div>
+              <div class="form__force-bar" id="bar3"></div>
+              <div class="form__force-bar" id="bar4"></div>
             </div>
+            <div class="form__error"></div>
+          </div>
 
-            <button type="button" class="btn-google">
-                S'inscrire avec Google
-            </button>
+          <div class="form__input">
+            <label for="confirmPassword">Confirmer le mot de passe <span class="form__obligatoire">*</span></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+            <div class="form__error"></div>
+          </div>
 
-            <div class="form-footer">
-                <p>Vous avez déjà un compte ? <a href="connexion.html" class="link">Se connecter</a></p>
-            </div>
+          <div class="form__options--colonne">
+            <label class="checkbox">
+              <input type="checkbox" id="cgu" name="cgu" required>
+              <span>J'accepte les <a href="https://taskflow.app/conditions" target="_blank" class="link">conditions
+                  d'utilisation</a>
+                et la politique de confidentialité. <span class="form__obligatoire">*</span></span>
+            </label>
+            <div class="form__error"></div>
 
+            <label class="checkbox">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <span>Je souhaite recevoir les nouveautés et offres par courriel.
+                <span class="form__opt">(facultatif)</span></span>
+            </label>
+          </div>
 
-        </div>
-    </section>
+        </fieldset>
+
+        <button type="submit" class="btn btn--primary">Créer un compte</button>
+
+      </form>
+
+      <div class="form__footer">
+        <p>Vous avez déjà un compte ? <a href="connexion.html" class="link">Se connecter</a></p>
+      </div>
+
+    </div>
+
+    </main>
+  </section>
 
 </body>
 
