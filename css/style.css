@@ -310,7 +310,7 @@ li.page-inscription__list {
 }
 
 /* Message d'erreur */
-.form__input .erreur__Message {
+.form__input .form__error {
     color: #ef4444;
     font-size: 12px;
     height: 13px;
