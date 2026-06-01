@@ -1,71 +1,6 @@
-/* ================================================
-   BASE
-   ================================================ */
-
-body {
-    font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
-    background: var(--bg-primary);
-}
-
-/* Titres */
-h1, h2, h3, h4 {
-    color: var(--text-primary);
-    margin: 0.5rem 0;
-}
-
-h1 { font-size: var(--text-3xl); }
-h2 { font-size: var(--text-2xl); }
-
-h2 span.text-accent { color: var(--accent-primary); }
-
-h3 {
-    font-size: var(--text-xl);
-    font-weight: 500;
-}
-
-h4 {
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    color: var(--accent-primary);
-    font-weight: 500;
-}
-
-/* Paragraphes */
-p {
-    color: var(--text-secondary);
-    font-size: var(--text-xs);
-    line-height: 1.5;
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
-}
-
-/* Listes */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.5rem 0;
-    align-items: center;
-    display: inline-flex;
-}
-
-/* Bouton violet générique */
-.purple {
-    background: var(--accent-primary);
-    color: var(--text-primary);
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-
-/* ================================================
-   HEADER / NAV
+Voilà ce qui manque à ajouter dans ton style-global.css — ce qui est déjà dedans je le répète pas :
+css/* ================================================
+   PAGE INDEX — HEADER
    ================================================ */
 
 header {
@@ -100,15 +35,24 @@ nav2 a {
     border-radius: 5px;
 }
 
+/* Logo index */
+.logo {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.logo i {
+    color: var(--accent-hover);
+}
+
 
 /* ================================================
-   PAGE D'ACCUEIL — PRÉSENTATION
+   PAGE INDEX — PRÉSENTATION
    ================================================ */
 
 .presentation {
     background: var(--gradient-card);
     padding: 2rem;
-    margin: 2rem 0;
     display: flex;
     align-items: center;
     margin-top: 0;
@@ -131,16 +75,19 @@ nav2 a {
 .presentation-content a.btn {
     padding: 0.5rem 1rem;
     background: var(--bg-secondary);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
     border: 2px solid var(--border-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin-right: 8px;
 }
 
 a.btn.purple {
     background: var(--accent-primary);
     color: var(--text-primary);
     border-radius: 5px;
+    border: none;
 }
 
 .presentation-content a.btn:hover {
@@ -170,6 +117,7 @@ a.btn.purple {
     margin-top: 0.7rem;
     margin-left: 1rem;
     color: var(--text-muted);
+    font-size: var(--text-sm);
 }
 
 i.fa-solid.fa-star {
@@ -183,16 +131,16 @@ i.fa-solid.fa-star {
 
 
 /* ================================================
-   PAGE D'ACCUEIL — DESCRIPTION DES TÂCHES
+   PAGE INDEX — DESCRIPTION DES TÂCHES
    ================================================ */
 
 .description-taches {
     background: var(--bg-primary);
     padding: 0;
-    margin: auto;
+    margin: 0;
+    margin-top: -35px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 75%;
 }
 
 .description-taches-content {
@@ -211,7 +159,7 @@ i.fa-solid.fa-star {
 
 
 /* ================================================
-   PAGE D'ACCUEIL — FORFAITS
+   PAGE INDEX — FORFAITS
    ================================================ */
 
 .forfaits {
@@ -245,6 +193,7 @@ i.fa-solid.fa-star {
     border-radius: 14px;
     flex: 1;
     position: relative;
+    text-align: left;
 }
 
 .forfait:hover {
@@ -281,6 +230,7 @@ i.fa-solid.fa-star {
     color: var(--text-secondary);
     padding: 8px 0;
     border-bottom: 1px solid var(--border-primary);
+    display: block;
 }
 
 .features li:last-child {
@@ -296,13 +246,13 @@ i.fa-solid.fa-star {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    text-align: center;
 }
 
 .forfait a.btn:hover {
     background: var(--accent-hover);
 }
 
-/* Forfait populaire */
 .forfait-populaire {
     border-color: var(--accent-primary);
     transform: scale(1.05);
@@ -322,116 +272,7 @@ i.fa-solid.fa-star {
 
 
 /* ================================================
-   PAGE CONNEXION
-   ================================================ */
-
-section.pageConnexion {
-    display: flex;
-    gap: 64px;
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg-primary);
-}
-
-/* Logo */
-.logoConnexion {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: var(--text-xl);
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 64px;
-}
-
-.logoConnexion i {
-    color: var(--accent-primary);
-    font-size: var(--text-2xl);
-}
-
-/* Colonne gauche */
-.text-connexion {
-    width: 50%;
-    padding: 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.text-connexion h2 {
-    font-size: var(--text-2xl);
-    color: var(--text-primary);
-    margin-bottom: 16px;
-}
-
-.text-connexion > p {
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
-
-/* Liste avantages */
-ul.listConnexion {
-    list-style-type: none;
-    padding: 0;
-    display: block;
-}
-
-li.listConnexion {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: var(--text-secondary);
-    margin-bottom: 24px;
-    font-size: var(--text-base);
-}
-
-.listConnexion i {
-    color: var(--accent-primary);
-    font-size: var(--text-lg);
-}
-
-.listConnexion {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-}
-
-/* Colonne droite */
-.connexion {
-    width: 50%;
-    padding: 64px;
-    text-align: center;
-    background: var(--bg-secondary);
-}
-
-.connexion h2 {
-    font-size: var(--text-2xl);
-    color: var(--text-primary);
-    margin-bottom: 8px;
-}
-
-.connexion h3 {
-    font-size: var(--text-base);
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-bottom: 40px;
-}
-
-.connexion h3 a {
-    color: var(--accent-primary);
-    text-decoration: none;
-}
-
-.connexion h3 a:hover {
-    color: var(--accent-hover);
-}
-
-
-/* ================================================
-   FOOTER
+   PAGE INDEX — FOOTER
    ================================================ */
 
 footer {
@@ -480,3 +321,136 @@ footer {
     color: var(--text-muted);
     font-size: var(--text-sm);
 }
+
+
+/* ================================================
+   PAGE CONNEXION
+   ================================================ */
+
+section.pageConnexion {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+/* Logo */
+.logoConnexion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 64px;
+}
+
+.logoConnexion a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: var(--text-lg);
+    font-weight: 700;
+}
+
+.logoConnexion i {
+    color: var(--accent-hover);
+}
+
+/* Colonne gauche */
+.text-connexion {
+    width: 50%;
+    padding: 64px;
+    background: var(--gradient-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.text-connexion h2 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.text-connexion > p {
+    color: var(--text-secondary);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Liste avantages */
+ul.listConnexion {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.listConnexion {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-size: var(--text-base);
+}
+
+.listConnexion i {
+    color: var(--accent-hover);
+    font-size: var(--text-base);
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Colonne droite */
+.connexion {
+    width: 50%;
+    padding: 64px;
+    background: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connexion h2 {
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin: 0 0 8px;
+}
+
+.text-connexion h2,
+.connexion h2 {
+    font-size: var(--text-2xl);
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+}
+
+.connexion h3 {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin: 0 0 40px;
+}
+
+.connexion h3 a {
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+.connexion h3 a:hover {
+    color: var(--accent-primary);
+}
+
+.formOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
