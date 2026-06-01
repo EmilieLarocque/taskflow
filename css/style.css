@@ -106,7 +106,7 @@ p {
    PAGE INSCRIPTION - MISE EN PAGE
    ================================================ */
 
-section.pageInscription {
+section.page-inscription {
     display: flex;
     gap: 64px;
     width: 100%;
@@ -115,7 +115,7 @@ section.pageInscription {
 }
 
 /* Colonne gauche - bienvenue */
-.text-Inscription {
+.page-inscription__sidebar {
     position: sticky;
     top: 0;
     height: 86vh;
@@ -130,7 +130,7 @@ section.pageInscription {
 }
 
 /* Colonne droite - formulaire */
-.inscription {
+.page-inscription__content {
     width: 50%;
     padding: 64px;
 }
@@ -141,7 +141,7 @@ section.pageInscription {
 
 /* Logo */
 
-.logoInscription {
+.page-inscription__logo {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -151,7 +151,7 @@ section.pageInscription {
     margin-bottom: 64px;
 }
 
-.logoInscription a {
+.page-inscription__logo a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -162,13 +162,13 @@ section.pageInscription {
     letter-spacing: -0.3px;
 }
 
-.logoInscription i {
+.page-inscription__logo i {
     color: var(--accent-hover);
 }
 
 
 /* Titres et texte */
-.text-Inscription h2 {
+.page-inscription__sidebar h2 {
     font-size: var(--text-2xl);
     color: var(--text-primary);
     font-weight: 700;
@@ -176,7 +176,7 @@ section.pageInscription {
     margin: 0;
 }
 
-.text-Inscription>p {
+.page-inscription__sidebar > p {
     color: var(--text-secondary);
     font-size: var(--text-base);
     line-height: 1.6;
@@ -185,13 +185,13 @@ section.pageInscription {
 
 /* Liste des avantages */
 
-ul.listInscription {
+ul.page-inscription__list {
     list-style-type: none;
     padding: 0;
     display: block;
 }
 
-li.listInscription {
+li.page-inscription__list {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -200,7 +200,7 @@ li.listInscription {
     font-size: var(--text-base);
 }
 
-.listInscription {
+.page-inscription__list {
     color: var(--text-secondary);
     margin-bottom: 16px;
     margin-left: 20px;
@@ -237,27 +237,27 @@ li.listInscription {
     padding-left: 40px;
 }
 
-.temoignageAuteur {
+.temoignage__auteur {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.temoignageAuteur img {
+.temoignage__auteur img {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     border: 2px solid var(--border-primary);
 }
 
-.temoignageInfo h4 {
+.temoignage__info h4 {
     color: var(--text-primary);
     font-size: var(--text-base);
     font-weight: 600;
     margin-bottom: 4px;
 }
 
-.temoignageInfo p {
+.temoignage__info p {
     color: var(--text-muted);
     font-size: var(--text-sm);
     font-style: normal;
@@ -268,11 +268,11 @@ li.listInscription {
    ================================================ */
 
 /* Champ individuel */
-.formInput {
+.form__input {
     margin-bottom: 24px;
 }
 
-.formInput label {
+.form__input label {
     display: block;
     color: var(--text-secondary);
     margin-bottom: 8px;
@@ -281,7 +281,7 @@ li.listInscription {
 }
 
 /* Inputs texte */
-.formInput input {
+.form__input input {
     width: 92%;
     padding: 16px;
     background: var(--bg-primary);
@@ -291,34 +291,33 @@ li.listInscription {
     font-size: var(--text-base);
 }
 
-.formInput input:focus {
+.form__input input:focus {
     outline: none;
     border-color: var(--accent-primary);
 }
 
-.formInput input::placeholder {
+.form__input input::placeholder {
     color: var(--text-muted);
 }
 
 /* États de validation */
-.formInput.sucess input {
+.form__input.sucess input {
     border-color: #4ade80;
 }
 
-.formInput.erreur input {
+.form__input.erreur input {
     border-color: #ef4444;
 }
 
 /* Message d'erreur */
-.formInput .erreurMessage {
+.form__input .erreur__Message {
     color: #ef4444;
-    font-size: 9px;
+    font-size: 12px;
     height: 13px;
 }
 
 /* Grid deux colonnes (ex: nom + prénom) */
-
-.champsForm {
+.champs__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 16px;
@@ -327,12 +326,12 @@ li.listInscription {
 
 /* Mentions obligatoire / facultatif */
 
-.obligatoire {
+.form__obligatoire {
     color: var(--accent-hover);
     margin-left: 2px;
 }
 
-.opt {
+.form__opt {
     color: var(--text-muted);
     font-size: var(--text-xs);
     font-weight: 400;
@@ -343,16 +342,16 @@ li.listInscription {
    FORMULAIRE — FIELDSETS
    ================================================ */
 
-fieldset .formInput {
+fieldset .form__input {
     padding: 0 20px;
     margin-bottom: 20px;
 }
 
-fieldset .champsForm .formInput {
+fieldset .champs__form .form__input {
     padding: 0;
 }
 
-.formInput label {
+.form__input label {
     display: block;
     color: var(--text-secondary);
     font-size: var(--text-sm);
@@ -380,13 +379,13 @@ legend {
     margin-bottom: 25px;
 }
 
-.legend-inner {
+.form__legend-inner {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.legend-num {
+.form__legend-num {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -400,7 +399,7 @@ legend {
     flex-shrink: 0;
 }
 
-.legend-text {
+.form__legend-text {
     font-size: var(--text-sm);
     font-weight: 600;
     color: var(--text-primary);
@@ -411,8 +410,8 @@ legend {
    FORMULAIRE — CHAMPS SPÉCIAUX
    ================================================ */
 
-   /* Select */
-fieldset .formInput select {
+/* Select */
+fieldset .form__input select {
     width: 100%;
     padding: 12px 16px;
     background: var(--bg-primary);
@@ -427,34 +426,34 @@ fieldset .formInput select {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-fieldset .formInput select:focus {
+fieldset .form__input select:focus {
     border-color: var(--accent-primary);
     box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-fieldset .formInput select option {
+fieldset .form__input select option {
     background: var(--bg-secondary);
     color: var(--text-primary);
 }
 
 /* Boutons radio */
-.radioGroup {
+.form__radio-group {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 4px;
 }
 
-.radioOption {
+.form__radio-option {
     display: flex;
     align-items: center;
 }
 
-.radioOption input[type="radio"] {
+.form__radio-option input[type="radio"] {
     display: none;
 }
 
-.radioOption label {
+.form__radio-option label {
     padding: 8px 16px;
     border: 1px solid var(--border-secondary);
     border-radius: 8px;
@@ -466,19 +465,19 @@ fieldset .formInput select option {
     margin: 0;
 }
 
-.radioOption label:hover {
+.form__radio-option label:hover {
     border-color: var(--accent-primary);
     color: var(--text-primary);
 }
 
-.radioOption input[type="radio"]:checked+label {
+.form__radio-option input[type="radio"]:checked+label {
     border-color: var(--accent-primary);
     background: var(--accent-soft);
     color: var(--accent-hover);
     font-weight: 500;
 }
 
-.radioGroup--colonne {
+.form__radio-group--colonne {
     flex-direction: column;
     gap: 6px;
 }
@@ -506,13 +505,13 @@ fieldset .formInput select option {
 }
 
 /* Mot de passe — indicateur de force */
-.passwordForce {
+.form__password--Force {
     display: flex;
     gap: 4px;
     margin-top: 8px;
 }
 
-.forceBar {
+.form__force-bar {
     height: 3px;
     flex: 1;
     border-radius: 2px;
@@ -520,24 +519,24 @@ fieldset .formInput select option {
     transition: background 0.3s;
 }
 
-.forceBar.s1 {
+.form__force-bar.s1 {
     background: var(--error);
 }
 
-.forceBar.s2 {
+.form__force-bar.s2 {
     background: var(--warning);
 }
 
-.forceBar.s3 {
+.form__force-bar.s3 {
     background: var(--success);
 }
 
-.forceBar.s4 {
+.form__force-bar.s4 {
     background: var(--success);
 }
 
 /* Options en colonne (CGU + newsletter) */
-.formOptions--colonne {
+.form__options--colonne {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
@@ -549,8 +548,8 @@ fieldset .formInput select option {
    FORMULAIRE — LIENS ET BOUTONS
    ================================================ */
 
-   /* Lien générique */
-   .link {
+/* Lien générique */
+.link {
     color: var(--accent-primary);
     text-decoration: none;
     font-size: var(--text-sm);
@@ -561,7 +560,7 @@ fieldset .formInput select option {
 }
 
 /* Bouton principal */
-.btn-submit {
+.btn.btn--primary {
     width: 100%;
     padding: 16px;
     background: var(--accent-primary);
@@ -574,60 +573,20 @@ fieldset .formInput select option {
     margin-bottom: 24px;
 }
 
-.btn-submit:hover {
+.btn.btn--primary:hover {
     background: var(--accent-hover);
-}
-
-/* Séparateur "ou" */
-
-.separator {
-    display: flex;
-    align-items: center;
-    color: var(--text-muted);
-    font-size: var(--text-sm);
-}
-
-.separator::before,
-.separator::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border-primary);
-}
-
-.separator span {
-    padding: 0 16px;
-}
-
-/* Bouton Google */
-
-.btn-google {
-    width: 100%;
-    padding: 16px;
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-primary);
-    border-radius: 5px;
-    font-size: var(--text-base);
-    cursor: pointer;
-    margin-top: 25px;
-}
-
-.btn-google:hover {
-    background: var(--surface-hover);
-    border-color: var(--border-secondary);
 }
 
 /* ================================================
    FORMULAIRE — PIED DE PAGE
    ================================================ */
 
-.form-footer {
+.form__footer{
     margin: 24px 0;
     text-align: center;
 }
 
-.form-footer p {
+.form__footer p {
     color: var(--text-secondary);
     font-size: var(--text-sm);
 }
@@ -673,7 +632,7 @@ fieldset .formInput select option {
     margin-bottom: 40px;
 }
 
-.confirmation-container a.btn-submit {
+.confirmation-container a.btn.btn--primary {
     display: inline-block;
     width: 90%;
     padding: 16px;
@@ -685,6 +644,47 @@ fieldset .formInput select option {
     text-align: center;
 }
 
-.confirmation-container a.btn-submit:hover {
+.confirmation-container a.btn.btn--primary:hover {
     background: var(--accent-hover);
+}
+
+/* ================================================
+   SKIP LINK
+   ================================================ */
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 0 0 8px 8px;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    z-index: 999;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+@media (max-width: 500px) {
+    section.page-Inscription {
+        flex-direction: column;
+    }
+
+    .page-inscription__sidebar {
+        display: none;
+    }
+
+    .page-inscription__sidebar,
+    .page-inscription__content {
+        width: 90%;
+        padding: 32px 24px;
+    }
+
+    .champs__form {
+        grid-template-columns: 1fr;
+    }
 }
